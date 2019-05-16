@@ -1,0 +1,50 @@
+float gigleX;
+float gigleY;
+float speed;
+PImage me;
+PImage food;
+
+void setup() {
+  me=loadImage("myface.jpg");
+  food=loadImage("pizza.png");
+  gigleX=width/2;
+  gigleY=height/2;
+  fullScreen ();
+  speed=0.8;
+}
+
+void draw() {
+
+  
+  background(255);
+  imageMode(CENTER);
+  image(me,gigleX, gigleY, 300,300);
+  image(food,mouseX, mouseY,100,100);
+  if (gigleX<mouseX) {
+
+    gigleX+=speed;
+  } else if (gigleX>mouseX) {
+
+    gigleX-=speed;
+  }
+
+
+  if (gigleY<mouseY) {
+
+    gigleY+=speed;
+  } else if (gigleY>mouseY) {
+
+    gigleY-=speed;
+  }
+
+
+
+  if (mousePressed) {
+
+    speed=3;
+   
+  } else {
+     speed=1;
+
+   
+  }
