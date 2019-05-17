@@ -10,7 +10,7 @@ void setup() {
   gigleX=width/2;
   gigleY=height/2;
   fullScreen ();
-  speed=0.8;
+  speed=3;
 }
 
 void draw() {
@@ -41,10 +41,10 @@ void draw() {
 
   if (mousePressed) {
 
-    speed=3;
+    speed=5;
    
   } else {
-     speed=1;
+     speed=3;
 
    
   }
